@@ -10,6 +10,7 @@ const App = () => {
       setRecipes(response.data)
     })
   }, [])
+
   return <div>
     {
       !recipes && (
