@@ -4,7 +4,7 @@ import axios from 'axios'
 
 
 const SingleRecipe = () => {
-  const [id, setSingle] = useState<any[]>()
+  const [getId, setSingle] = useState<any[]>()
   useEffect(() => {
     axios.get('http://localhost:5000/b7f20ff1-2777-402a-9201-d2aad0d6a7a1').then(response => {
       setSingle(response.data)
@@ -14,25 +14,24 @@ const SingleRecipe = () => {
   return <div>
 
     {
-      !id && (
+      !getId && (
         <p>'hello'</p>
       )
     }
     {
-      id && (
+      getId && (
         <ul>
           {
-            id.map(id => {
+            getId.map(id => {
               return (
-                <li key={id.id}>{id.name}</li>
+                <li key={id.name}>{id.name}</li>
               )
             })
           }
-        </ul>
-      )
+        </ul>)
     }
 
-  </div>
+  </div >
 }
 
 
