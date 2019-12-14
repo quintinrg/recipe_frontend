@@ -1,9 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/app';
-import SingleRecipe from './components/singleRecipe';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './components/app'
 
-
-ReactDOM.render(<App />, document.getElementById('root'));
-
-ReactDOM.render(<SingleRecipe />, document.getElementById('single'));
+ReactDOM.render(<App />, document.getElementById('root'))
