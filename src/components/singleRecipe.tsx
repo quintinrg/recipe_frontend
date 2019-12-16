@@ -15,7 +15,7 @@ const SingleRecipe = () => {
 
     {
       !getId && (
-        <p>'hello'</p>
+        <p>'Loading Single Ingredient'</p>
       )
     }
     {
