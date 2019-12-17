@@ -1,38 +1,18 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
 
-
+import React from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
+import RecipeList from './recipe-list'
+import SingleRecipe from './single-recipe'
 
 const App = () => {
-  const [recipes, setRecipes] = useState<any[]>()
-  useEffect(() => {
-    axios.get('http://localhost:5000').then(response => {
-      setRecipes(response.data)
-    })
-  }, [])
-
-  return <div>
-    {
-      !recipes && (
-        <h1>Loading...</h1>
-      )
-    }
-    {
-      recipes && (
-        <ul>
-          {
-            recipes.map(recipe => {
-              return (
-                <li key={recipe.id}>{recipe.name}, {recipe.id}</li>
-              )
-            })
-          }
-        </ul>
-      )
-    }
-  </div>
+  <BrowserRouter>
+    <Route exact={true} path="/">
+      <RecipeList />
+    </Route>
+    <Route path=":id">
+      <SingleRecipe />
+    </Route>
+  </BrowserRouter>
 }
 
 export default App
-
-// Use axios to delete data
