@@ -13,6 +13,11 @@ const RecipeList = () => {
   }, [])
 
   return <div>
+
+    <h2>
+      <p>This is "Home"!</p>
+    </h2>
+
     {
       !recipes && (
         <h1 id="loading">Loading...</h1>
@@ -20,6 +25,7 @@ const RecipeList = () => {
     }
     {
       recipes && (
+
         <ul>
           {
             recipes.map(recipe => {
