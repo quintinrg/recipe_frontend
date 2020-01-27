@@ -16,6 +16,7 @@ const RecipeList = () => {
 
     <h2>
       <p>This is "Home"!</p>
+      <Link to='/about'>About</Link>
     </h2>
 
     {

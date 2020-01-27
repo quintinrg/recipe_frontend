@@ -37,5 +37,4 @@ const SingleRecipe = () => {
   </div >
 }
 
-
 export default SingleRecipe
