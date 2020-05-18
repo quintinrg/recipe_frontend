@@ -11,8 +11,8 @@ const App = () => {
         <BrowserRouter>
             <Switch>
                 <Route exact path='/' component={RecipeList} />
-                <Route path='/:id' component={SingleRecipe} />
                 <Route exact path='/about' component={About} />
+                <Route path='/:id' component={SingleRecipe} />
             </Switch>
         </BrowserRouter>
 

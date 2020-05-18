@@ -1,11 +1,12 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 
 
 const About = () => {
     return (
         <div>
-            <h1>Hello! Welcome to my first full-stack project!</h1>
+            <Link id='nav' to='/'>Home</Link>
+            <h3>Hello! Welcome to my first full-stack project!</h3>
             <footer>Contact me at quintinrg@protonmail.com</footer>
         </div>
     )

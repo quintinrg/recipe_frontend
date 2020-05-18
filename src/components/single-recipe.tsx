@@ -14,11 +14,11 @@ const SingleRecipe = () => {
 
   return <div>
 
-    <Link id="nav" to='/'>Home</Link>
+    <Link id='nav' to='/'>Home</Link>
 
     {
       !getId && (
-        <p id="loading">'Loading Single Ingredient'</p>
+        <p id='loading'>'Loading Single Ingredient'</p>
       )
     }
     {

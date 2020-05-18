@@ -13,15 +13,12 @@ const RecipeList = () => {
   }, [])
 
   return <div>
-
-    <h2>
-      <p>This is "Home"!</p>
-      <Link to='/about'>About</Link>
-    </h2>
+    <p id='nav'>This is 'Home'!</p>
+    <Link to='/about'>About</Link>
 
     {
       !recipes && (
-        <h1 id="loading">Loading...</h1>
+        <h1 id='loading'>Loading...</h1>
       )
     }
     {
@@ -32,7 +29,7 @@ const RecipeList = () => {
             recipes.map(recipe => {
               return (
                 <li key={recipe.id}>
-                  <Link to={`/${recipe.id}`}>{recipe.name}, {recipe.id}</Link>
+                  <Link to={`/${recipe.id}`}>{recipe.name}</Link> <a href="google.com">LINK</a>
                 </li>
               )
             })
@@ -40,7 +37,7 @@ const RecipeList = () => {
         </ul>
       )
     }
-  </div>
+  </div >
 }
 
 export default RecipeList
